@@ -39,6 +39,7 @@
         <button onclick = "parenthesis()">( )</button>
         <button onclick = "clearValue()">C</button>
         <br>
+	<button onclick = "goback()">←</button>
         <br>
       </div>
       <br>
@@ -159,6 +160,9 @@ a:hover {
     if (event.key === "c") {
         clearValue();
     }
+    if (event.key === "backspace") {
+	goback();
+    }
 });
 
 function one () {
@@ -236,7 +240,9 @@ function equal () {
         document.getElementById('equation').value = error;
     }
 }
-
+function goback () {
+	document.getElementById ("equation").value.slice(0, -1);
+}
 ///////////////////////////////////
 
 const input = document.getElementById('equation');
