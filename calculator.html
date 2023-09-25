@@ -35,10 +35,13 @@
         <br>
         <br>
 	<button onclick = "squareroot()">sqrt(</button>
-        <button onclick = "exponent()">^</button>
+        <button onclick = "sine()">sin(</button>
+	<button onclick = "cosine()">cos(</button>
+	<button onclick = "tangent()">tan(</button>
+        <br>
+	<button onclick = "exponent()">^</button>
         <button onclick = "parenthesis()">( )</button>
         <button onclick = "clearValue()">C</button>
-        <br>
 	<button onclick = "goback()">←</button>
         <br>
 	<br>
@@ -223,6 +226,18 @@ function parenthesis () {
 }
 function squareroot () {
 	document.getElementById ("equation").value += "sqrt(";
+	x = 1;
+}
+function sine () {
+	document.getElementById ("equation").value += "sin(";
+	x = 1;
+}
+function cosine () {
+	document.getElementById ("equation").value += "cos(";
+	x = 1;
+}
+function tangent () {
+	document.getElementById ("equation").value += "tan(";
 	x = 1;
 }
 function clearValue () {
