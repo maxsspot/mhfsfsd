@@ -5,61 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.1/math.js"></script>
-		<title>Math Help - Number Rounder</title>
+		<title>Math Help - Fraction to Decimal</title>
 	</head>
 	<body>
-		<br>
-      <input placeholder = "Number to round..." type = "number" id = "inputNumber" />
-    <br>
-    <br>
-    <p>RESULT: <span id = "result">No Input</span></p>
-    <br>
-    <label for = "placeValue">Round to:</label>
-    <select name = "placeValue" id = "placeValue">
-	<option value = "WHOLE" disabled>WHOLE</option>
-	<option value = "Thousands">Thousands</option>
-	<option value = "Hundreds">Hundreds</option>
-	<option value = "Tens">Tens</option>
-	<option value = "Ones" selected>Ones</option>
-	<option value = "DECIMAL" disabled>DECIMAL</option>
-	<option value = "Tenths">Tenths</option>
-	<option value = "Hundredths">Hundredths</option>
-	<option value = "Thousandths">Thousandths</option>
-    </select>
+	<br>
+	<input placeholder = "Numerator" />
+	-----
+	<input placeholder = "Denominator" />
 	<script>
-	var selectBox = document.getElementById ("placeValue");
-	var mode = "ones";
-	
-	selectBox.addEventListener("change", function() {
-      		if (selectBox.value == "Thousands") {
-			mode = "thousands";
-		} else if (selectBox.value == "Hundreds") {
-			mode = "hundreds";
-		} else if (selectBox.value == "Tens") {
-			mode = "tens";
-		} else if (selectBox.value == "Ones") {
-			mode = "ones";
-		} else if (selectBox.value == "Tenths") {
-			mode = "tenths";
-		} else if (selectBox.value == "Hundredths") {
-			mode = "hundredths";
-		} else if (selectBox.value == "Thousandths") {
-			mode = "thousandths";
-		}
-    	});
-
-	///////////////////////////
-	//////////////////////////
-	/////////////////////////
-		
-	var result = document.getElementById ("result");
-	var inputNumber = parseFloat(document.getElementById ("inputNumber").value);
-		
-	setInterval (function() {
-		if (mode == "ones") {
-			result.innerHTML = Math.round(inputNumber / 1) * 1;
-		}
-	}, 1);
 	</script>
 		<style>
 			* {
@@ -78,12 +31,20 @@
 				text-decoration:underline;
 			}
 
+			input {
+				width:100px;
+				height:30px;
+				background-color:transparent;
+				border:lightgray solid 1px;
+			}
+
       input {
         width:250px;
         height:30px;
         background-color:transparent;
         border:transparent;
         border-bottom:black solid 1px;
+      }
 		</style>
     </body>
 </html>
