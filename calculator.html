@@ -150,8 +150,11 @@ a:hover {
     if (event.key === "^") {
         exponent();
     }
-    if (event.key === "=" || event.key === "Enter") {
+    if (event.key === "=") {
         equal();
+    }
+    if (event.key === "enter") {
+	equal();
     }
     if (event.key === "c") {
         clearValue();
