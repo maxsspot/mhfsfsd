@@ -12,10 +12,10 @@
       <input placeholder = "Number to round..." type = "number" />
     <br>
     <br>
-    <p>RESULT: <span id = "result">...</span></p>
+    <p>RESULT: <span id = "result">No Input</span></p>
     <br>
     <label for = "placeValue">Round to:</label>
-    <select name = "placeValue">
+    <select name = "placeValue" id = "placeValue">
 	<option value = "WHOLE" disabled>WHOLE</option>
 	<option value = "Thousands">Thousands</option>
 	<option value = "Hundreds">Hundreds</option>
@@ -26,7 +26,30 @@
 	<option value = "Hundreths">Hundreths</option>
 	<option value = "Thousandths">Thousandths</option>
     </select>
+	<script>
+	var selectBox = document.getElementById ("placeValue").value;
+	var mode;
+	
+	selectBox.addEventListener("change", function() {
+      		if (selectBox = "Thousands") {
+			mode = "thousands";
+		} else if (selectBox = "Hundreds") {
+			mode = "hundreds";
+		} else if (selectBox = "Tens") {
+			mode = "tens";
+		} else if (selectBox = "Ones") {
+			mode = "ones";
+		} else if (selectBox = "Tenths") {
+			mode = "tenths";
+		} else if (selectBox = "Hundreths") {
+			mode = "hundreths";
+		} else if (selectBox = "Thousandths") {
+			mode = "thousandths";
+		}
 
+		console.log (mode);
+    	});
+	</script>
 		<style>
 			* {
 				font-family: 'Lato', sans-serif;
