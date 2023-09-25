@@ -241,7 +241,8 @@ function equal () {
     }
 }
 function goback () {
-	document.getElementById ("equation").value.slice(0, -1);
+	var newValue = document.getElementById ("equation").value.slice(0, -1);
+	document.getElementById ("equation").value = newValue;
 }
 ///////////////////////////////////
 
