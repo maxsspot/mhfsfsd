@@ -9,10 +9,19 @@
 	</head>
 	<body>
 	<br>
-	<input placeholder = "Numerator" type = "number" id = "denominator" /><br>
+	<input placeholder = "Numerator" type = "number" id = "numerator" /><br>
 	<hr>
 	<input placeholder = "Denominator" type = "number" id = "denominator" />
+	<h1>=</h1>
+	<span id = "result"></span>
 	<script>
+		setInterval(function () {
+			var numerator = document.getElementById ("numerator");
+			var denominator = document.getElementById ("denominator");
+			var result = document.getElementById ("result");
+
+			result.innerHTML = numerator / denominator;
+		}, 500);
 	</script>
 		<style>
 			* {
