@@ -28,7 +28,7 @@
     </select>
 	<script>
 	var selectBox = document.getElementById ("placeValue");
-	var mode;
+	var mode = "ones";
 	
 	selectBox.addEventListener("change", function() {
       		if (selectBox.value == "Thousands") {
@@ -56,8 +56,8 @@
 	var inputNumber = parseFloat(document.getElementById ("inputNumber").value);
 		
 	setInterval (function() {
-		if (mode == "thousands") {
-			result.innerHTML = Math.round(inputNumber / 1000) * 1000;
+		if (mode == "ones") {
+			result.innerHTML = Math.round(inputNumber / 1) * 1;
 		}
 	}, 1);
 	</script>
