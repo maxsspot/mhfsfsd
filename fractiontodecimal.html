@@ -20,7 +20,11 @@
 			var denominator = document.getElementById ("denominator");
 			var result = document.getElementById ("result");
 
-			result.innerHTML = numerator / denominator;
+			if (numerator.value != null && denominator.value != null) {
+				result.innerHTML = numerator.value / denominator.value;
+			} else {
+				result.innerHTML = "...";
+			}
 		}, 500);
 	</script>
 		<style>
