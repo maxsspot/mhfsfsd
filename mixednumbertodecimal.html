@@ -25,7 +25,7 @@
 			var result = document.getElementById ("result");
 
 			if (numerator.value != null && denominator.value != null && wholenumber.value != null) {
-				result.innerHTML = wholenumber.value + numerator.value / denominator.value;
+				result.innerHTML = parseInt(wholenumber.value) + numerator.value / denominator.value;
 			} else {
 				result.innerHTML = "...";
 			}
