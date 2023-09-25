@@ -53,11 +53,11 @@
 	/////////////////////////
 		
 	var result = document.getElementById ("result");
-	var inputNumber = document.getElementById ("inputNumber");
+	var inputNumber = parseInt(document.getElementById ("inputNumber"));
 		
 	setInterval (function() {
 		if (mode == "thousands") {
-			var roundedThousands = parseInt(Math.round(inputNumber / 1000) * 1000);
+			var roundedThousands = Math.round(inputNumber / 1000) * 1000)
 			result.innerHTML = roundedThousands;
 		}
 	}, 1);
