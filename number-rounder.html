@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<br>
-      <input placeholder = "Number to round..." type = "number" />
+      <input placeholder = "Number to round..." type = "number" id = "inputNumber" />
     <br>
     <br>
     <p>RESULT: <span id = "result">No Input</span></p>
@@ -46,9 +46,20 @@
 		} else if (selectBox.value == "Thousandths") {
 			mode = "thousandths";
 		}
-
-		console.log (mode);
     	});
+
+	///////////////////////////
+	//////////////////////////
+	/////////////////////////
+		
+	var result = document.getElementById ("result");
+	var inputNumber = document.getElementById ("inputNumber");
+		
+	setInterval (function() {
+		if (mode == "thousands") {
+			result.innerHTML = Math.round(inputNumber / 100) * 100;
+		}
+	}, 500);
 	</script>
 		<style>
 			* {
