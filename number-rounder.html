@@ -57,9 +57,10 @@
 		
 	setInterval (function() {
 		if (mode == "thousands") {
-			result.innerHTML = parseInt(Math.round(inputNumber / 100) * 100);
+			var roundedThousands = parseInt(Math.round(inputNumber / 1000) * 1000);
+			result.innerHTML = roundedThousands;
 		}
-	}, 500);
+	}, 1);
 	</script>
 		<style>
 			* {
