@@ -34,6 +34,7 @@
         <button onclick = "equal()">=</button>
         <br>
         <br>
+	<button onclick = "squareroot()">sqrt(</button>
         <button onclick = "exponent()">^</button>
         <button onclick = "parenthesis()">( )</button>
         <button onclick = "clearValue()">C</button>
@@ -217,6 +218,10 @@ function parenthesis () {
         document.getElementById ("equation").value += ")";
         x=0;
     }
+}
+function squareroot () {
+	document.getElementById ("equation").value += "sqrt(";
+	x = 0
 }
 function clearValue () {
     document.getElementById ("equation").value = "";
