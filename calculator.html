@@ -243,6 +243,10 @@ function tangent () {
 function clearValue () {
     document.getElementById ("equation").value = "";
 }
+function goback () {
+	var newValue = document.getElementById ("equation").value.slice(0, -1);
+	document.getElementById ("equation").value = newValue;
+}
 function equal () {
     const input = document.getElementById('equation').value;
     
@@ -253,10 +257,7 @@ function equal () {
         document.getElementById('equation').value = error;
     }
 }
-function goback () {
-	var newValue = document.getElementById ("equation").value.slice(0, -1);
-	document.getElementById ("equation").value = newValue;
-}
+	    
 ///////////////////////////////////
 
 const input = document.getElementById('equation');
