@@ -13,12 +13,14 @@
 		<label for = "roundingplace">ROUND TO: ‎‎</label>
 	<select id = "roundingplace">
 		<option value = "Whole" disabled>WHOLE</option>
-		<option value = "" disabled></option>
 		<option value = "Ones" selected>Ones</option>
 		<option value = "Tens">Tens</option>
 		<option value = "Hundreds">Hundreds</option>
 		<option value = "Thousands">Thousands</option>
 		<option value = "Decimal" disabled>DECIMAL</option>
+		<option value = "Tenths">Tenths</option>
+		<option value = "Hundredths">Hundredths</option>
+		<option value = "Thousandths">Thousandths</option>
 	</select>
 	<br>
 		<br>
@@ -44,6 +46,9 @@
 					result.innerHTML = parseInt(Math.round(unrounded.value / 100) * 100);
 				} else if (mode.value == "Thousands") {
 					result.innerHTML = parseInt(Math.round(unrounded.value / 1000) * 1000);
+					////////////////////////////////
+				} else if (mode.value == "Tenths") {
+					result.innerHTML = parseInt(Math.round(unrounded.value / -10) * -10);
 				}
 				
 			} else {
