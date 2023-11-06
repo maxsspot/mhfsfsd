@@ -165,6 +165,12 @@ a:hover {
     if (event.key === "Backspace") {
 	goback();
     }
+    if (event.key === "(") {
+	parenthesisleft();
+    }
+    if (event.key === ")") {
+	parenthesisright();
+    }
 });
 
 function one () {
