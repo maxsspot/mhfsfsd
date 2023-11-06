@@ -11,7 +11,7 @@
 	<br>
 	<br>
 		<label for = "roundingplace">ROUND TO: ‎‎</label>
-	<select id = "roundingplace">
+	<select id = "roundingplace" value = "Ones">
 		<option value = "Tens">Tens</option>
 		<option value = "Ones">Ones</option>
 	</select>
@@ -31,9 +31,9 @@
 				
 			if (unrounded.value != null) {
 				
-				if (mode == "Ones") {
+				if (mode.value == "Ones") {
 					result.innerHTML = parseInt(Math.round(unrounded.value));
-				} else if (mode == "Tens") {
+				} else if (mode.value == "Tens") {
 					result.innerHTML = parseInt(Math.round(unrounded.value / 100) * 100);
 				}
 				
