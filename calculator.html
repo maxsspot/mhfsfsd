@@ -34,7 +34,7 @@
         <button onclick = "equal()" style = "font-weight:bolder;">=</button>
         <br>
         <br>
-	<button onclick = "squareroot()" title = "Square Root">sqrt(</button>
+	<button onclick = "squareroot()">sqrt(</button>
         <button onclick = "sine()">sin(</button>
 	<button onclick = "cosine()">cos(</button>
 	<button onclick = "tangent()">tan(</button>
@@ -106,7 +106,7 @@ a:hover {
     </style>
 
     <script>
-      document.body.addEventListener("keypress", function (event) {
+      document.body.addEventListener("keydown", function (event) {
     if (event.key === "1") {
         one();
     }
@@ -162,6 +162,7 @@ a:hover {
         clearValue();
     }
     if (event.key === "Backspace") {
+	alert (key);
 	goback();
     }
 });
