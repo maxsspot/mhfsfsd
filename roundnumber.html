@@ -10,8 +10,9 @@
 	<body>
 	<br>
 	<br>
-		<label for = "roundingplace">ROUND TO: </label>
+		<label for = "roundingplace">ROUND TO: ‎‎</label>
 	<select id = "roundingplace">
+		<option value = "Tens">Tens</option>
 		<option value = "Ones">Ones</option>
 	</select>
 	<br>
@@ -26,9 +27,16 @@
 		setInterval(function () {
       			var unrounded = document.getElementById ("unrounded");
 			var result = document.getElementById ("result");
-
+			var mode = document.getElementById ("roundingplace");
+				
 			if (unrounded.value != null) {
-				result.innerHTML = parseInt(Math.round(unrounded.value));
+				
+				if (mode == "Ones") {
+					result.innerHTML = parseInt(Math.round(unrounded.value));
+				} else if (mode == "Tens") {
+					result.innerHTML = parseInt(Math.round(unrounded.value / 100) * 100);
+				}
+				
 			} else {
 				result.innerHTML = "...";
 			}
