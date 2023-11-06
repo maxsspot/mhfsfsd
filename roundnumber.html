@@ -49,6 +49,10 @@
 					////////////////////////////////
 				} else if (mode.value == "Tenths") {
 					result.innerHTML = (Math.round(10 * unrounded.value) / 10).toFixed(1);
+				} else if (mode.value == "Hunderedths") {
+					result.innerHTML = (Math.round(100 * unrounded.value) / 100).toFixed(1);
+				} else if (mode.value == "Thousandths") {
+					result.innerHTML = (Math.round(1000 * unrounded.value) / 1000).toFixed(1);
 				}
 				
 			} else {
