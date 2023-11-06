@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.5.1/math.js"></script>
+		<title>Math Help - Round Number</title>
+	</head>
+	<body>
+      <h1>Round Number</h1>
+    <br>
+    <input placeholder = "Unrounded number here..." id = "unrounded" />
+    =
+    <span id = "rounded"></span>
+    <script>
+      setInterval(function() {
+        var unrounded = document.getElementById ("unrounded");
+        document.getElementById ("rounded").innerHTML = Math.round(unrounded);
+      }, 1);
+    </script>
+		<style>
+			* {
+				font-family: 'Lato', sans-serif;
+				text-align:center;
+				background-color:whitesmoke;
+			}
+
+			a {
+				text-decoration:none;
+				font-size:20px;
+			}
+
+			a:hover {
+				text-decoration:underline;
+			}
+		</style>
+    </body>
+</html>
