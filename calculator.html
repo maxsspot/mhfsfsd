@@ -40,7 +40,8 @@
 	<button onclick = "tangent()">tan(</button>
         <br>
 	<button onclick = "exponent()">^</button>
-        <button onclick = "parenthesis()">( )</button>
+        <button onclick = "parenthesisleft()" style = "width:25px;">(</button>
+	<button onclick = "parenthesisright()" style = "width:25px;">)</button>
 	<button onclick = "goback()">←</button>
 	<button onclick = "clearValue()">C</button>
         <br>
@@ -214,15 +215,11 @@ function divide () {
 function exponent () {
     document.getElementById ("equation").value += "^";
 }
-var x = 0;
-function parenthesis () {
-    if (x === 0) {
+function parenthesisleft () {
         document.getElementById ("equation").value += "(";
-        x=1;
-    } else {
+}
+function parenthesisright () {
         document.getElementById ("equation").value += ")";
-        x=0;
-    }
 }
 function squareroot () {
 	document.getElementById ("equation").value += "sqrt(";
