@@ -267,7 +267,7 @@ const input = document.getElementById('equation');
 const container = document.getElementById('cal');
 
 input.addEventListener('input', () => {
-  container.scrollLeft = container.scrollWidth;
+  terminal.scrollTo(0,terminal.scrollWidth); 
 });
     </script>
     </body>
