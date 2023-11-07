@@ -26,7 +26,7 @@
 			if (billamount.value != null && tippercentage.value != null) {
 			   	var tipAmount = parseInt(billamount.value * tippercentage.value);
     				
-				if (result.length == 3) {
+				if (result.length === 3) {
 					result.innerHTML = tipAmount.toString().charAt(0) + '.' + tipAmount.toString().slice(1);
 					result.innerHTML = tipAmount.toString().charAt(2) + '0' + tipAmount.toString().slice(1);
 				}
