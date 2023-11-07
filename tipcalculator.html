@@ -13,7 +13,7 @@
 	<input placeholder = "Total Bill Amount" type = "number" id = "billamount" /><br>
 	<input placeholder = "Tip Percentage" type = "number" id = "tippercentage" />
 	<h1>=</h1>
-	$<span id = "result">...</span> tip
+	$<span id = "result">...</span><span id = "zero">0</span> tip
 	<br>
 	<br>
 	<a href = "/">RETURN HOME</a>
@@ -28,6 +28,10 @@
     				result.innerHTML = tipAmount.toString().charAt(0) + '.' + tipAmount.toString().slice(1);
 			} else {
 				result.innerHTML = "...";
+			}
+
+			if (result.innerHTML = "0.") {
+				result.innerHTML = "0.0";
 			}
 		},1);
 	</script>
