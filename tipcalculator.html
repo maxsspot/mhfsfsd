@@ -11,7 +11,6 @@
 	<br>
 	<br>
 	<input placeholder = "Total Bill Amount" type = "number" id = "billamount" /><br>
-	<hr>
 	<input placeholder = "Tip Percentage here" type = "number" id = "tippercentage" />
 	<h1>=</h1>
 	$<span id = "result">...</span> tip
@@ -24,7 +23,7 @@
 			var tippercentage = document.getElementById ("tippercentage");
 			var result = document.getElementById ("result");
 
-			if (numerator.value != null && denominator.value != null) {
+			if (billamount.value != null && tippercentage.value != null) {
 				result.innerHTML = (billamount * tippercentage) / 100;
 			} else {
 				result.innerHTML = "...";
