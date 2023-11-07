@@ -266,9 +266,9 @@ function equal () {
 const input = document.getElementById('equation');
 const container = document.getElementById('cal');
 
-input.addEventListener('input', () => {
+setInterval(function () {
   input.scrollTo(0,input.scrollWidth); 
-});
+}, 1);
     </script>
     </body>
 </html>
