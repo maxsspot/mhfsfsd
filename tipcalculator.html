@@ -24,7 +24,8 @@
 			var result = document.getElementById ("result");
 
 			if (billamount.value != null && tippercentage.value != null) {
-				result.innerHTML = parseInt(billamount.value * tippercentage.value / 100);
+			   	var tipAmount = parseInt(billamount.value * tippercentage.value);
+    				result.innerHTML = tipAmount.toString().charAt(0) + '.' + tipAmount.toString().slice(1);
 			} else {
 				result.innerHTML = "...";
 			}
