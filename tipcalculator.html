@@ -29,7 +29,7 @@
 			var result = document.getElementById("result");
 
 			if (bill.value != null && tipAmount.value != null) {
-  			   if (2 > tipAmount.length) {
+  			   if (2 > tipAmount.value.length) {
 				result.innerHTML = billFloat * tip;
 			   } else {
 				result.innerHTML = billFloat * tipPercentage;
