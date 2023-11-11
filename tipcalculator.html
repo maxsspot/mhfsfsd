@@ -30,9 +30,9 @@
 
 			if (bill.value != null && tipAmount.value != null) {
   			   if (2 > tipAmount.value.length) {
-				result.innerHTML = (billFloat * tipAmount.value).toFixed(2);
+				result.innerHTML = (billFloat * tipAmount.value).toFixed(1);
 			   } else {
-				result.innerHTML = billFloat * tipPercentage;
+				result.innerHTML = (billFloat * tipPercentage).toFixed(2);
 			   }
 			} else {
 				result.innerHTML = "...";
