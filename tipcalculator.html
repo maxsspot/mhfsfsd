@@ -20,15 +20,14 @@
 	<a href = "/">RETURN HOME</a>
 	<script>
 		setInterval(function () {
-			var bill = document.getElementById ("bill");
-			
-			var tip = document.getElementById ("tipercentage");
-			var tipresult = parseFloat ("0." + tip);
-			
-			var result = document.getElementById ("result");
+			var bill = document.getElementById("bill");
+			var tip = document.getElementById("tipercentage");
+			var result = document.getElementById("result");
 
 			if (bill.value != null && tip.value != null) {
-			  result.innerHTML = bill.value * tipresult.value;
+			   var tipPercentage = parseFloat("0." + tip.value);
+  			   var total = parseFloat(bill.value) * (1 + tipPercentage);
+  			   result.innerHTML = total.toFixed(2);
 			} else {
 				result.innerHTML = "...";
 			}
