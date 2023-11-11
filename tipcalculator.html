@@ -14,7 +14,7 @@
 	<hr>
 	<input placeholder = "Tip Percentage" type = "number" id = "tipercentage" />
 	<h1>=</h1>
-	<span id = "result">...</span>
+	$<span id = "result">...</span>
 	<br>
 	<br>
 	<a href = "/">RETURN HOME</a>
@@ -30,7 +30,7 @@
 
 			if (bill.value != null && tipAmount.value != null) {
   			   if (2 > tipAmount.value.length) {
-				result.innerHTML = billFloat * tipAmount;
+				result.innerHTML = billFloat * tipAmount.value;
 			   } else {
 				result.innerHTML = billFloat * tipPercentage;
 			   }
