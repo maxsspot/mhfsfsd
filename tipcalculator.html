@@ -29,13 +29,7 @@
 			var result = document.getElementById("result");
 
 			if (bill.value != null && tipAmount.value != null) {
-  			   if (2 > tipAmount.value.length) {
-				result.innerHTML = (billFloat * tipAmount.value).toFixed(1) + "0";
-			   } else if (3 > tipAmount.value.length) {
-				result.innerHTML = (billFloat * tipPercentage).toFixed(2);
-			   } else if (0 == tipAmount.value.length) {
-				result.innerHTML = "0.0"
-			   }
+				result.innerHTML = (billFloat * tipAmount.value).toFixed(2) + "";
 			} else {
 				result.innerHTML = "...";
 			}
