@@ -24,16 +24,15 @@
 			var billFloat = parseFloat (bill.value);
 			
 			var tipAmount = document.getElementById("tipercentage");
-			var tipPercentage1 = parseFloat("0.0" + tipAmount.value);
-			var tipPercentage2 = parseFloat("0." + tipAmount.value);
+			var tipPercentage1 = parseFloat("0." + tipAmount.value);
 			
 			var result = document.getElementById("result");
 
 			if (bill.value != null && tipAmount.value != null) {
 			    if (tipAmount.value.length < 2) {
-				result.innerHTML = (billFloat * tipPercentage1.value).toFixed(2);
+				result.innerHTML = (billFloat * tipAmount.value).toFixed(2);
 			    } else {
-				result.innerHTML = (billFloat * tipPercentage2.value).toFixed(2);
+				result.innerHTML = (billFloat * tipPercentage1.value).toFixed(2);
 			    }
 			} else {
 				result.innerHTML = "...";
