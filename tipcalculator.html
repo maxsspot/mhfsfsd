@@ -23,13 +23,17 @@
 			var bill = document.getElementById("bill");
 			var billFloat = parseFloat (bill.value);
 			
-			var tip = document.getElementById("tipercentage");
-			var tipPercentage = parseFloat("0." + tip.value);
+			var tipAmount = document.getElementById("tipercentage");
+			var tipPercentage = parseFloat("0." + tipAmount.value);
 			
 			var result = document.getElementById("result");
 
 			if (bill.value != null && tip.value != null) {
-  			   result.innerHTML = billFloat * tipPercentage;
+  			   if (tipAmount.length < 2) {
+				result.innerHTML = billFloat * tip;
+			   } else if (tipAmount.length > 1) {
+				result.innerHTML = billFloat * tipPercentage;
+			   }
 			} else {
 				result.innerHTML = "...";
 			}
