@@ -38,7 +38,7 @@
 			}
 
 			if (tipAmount.value > 99) {
-				var newOne = tipAmount.slice(0, -1);
+				var newOne = tipAmount.value.slice(0, -1);
 				tipAmount.value = newOne;
 			}
 		},1);
