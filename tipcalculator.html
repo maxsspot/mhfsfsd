@@ -26,8 +26,8 @@
 
 			if (bill.value != null && tip.value != null) {
 			   var tipPercentage = parseFloat("0." + tip.value);
-  			   var total = parseFloat(bill.value) * (1 + tipPercentage);
-  			   result.innerHTML = total.toFixed(2);
+  			   var total = parseFloat(bill.value * tipPercentage.value);
+  			   result.innerHTML = total;
 			} else {
 				result.innerHTML = "...";
 			}
