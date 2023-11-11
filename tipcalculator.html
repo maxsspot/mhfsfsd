@@ -25,7 +25,7 @@
 			var result = document.getElementById ("result");
 
 			if (bill.value != null && tippercentage.value != null) {
-			  result.innerHTML = bill.value * tippercentage.value;
+			  result.innerHTML = (bill.value * tippercentage.value) / 10;
 			} else {
 				result.innerHTML = "...";
 			}
