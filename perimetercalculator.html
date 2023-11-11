@@ -30,12 +30,8 @@
 			var result = document.getElementById ("result");
 			var mode = document.getElementById ("shape");
 				
-			if (unrounded.value != null) {
-				
-				if (mode.value == "Square") {
-					result.innerHTML = squareSide * 4;
-				}
-				
+			if (mode.value == "Square") {
+				result.innerHTML = squareSide * 4;
 			} else {
 				result.innerHTML = "0";
 			}
