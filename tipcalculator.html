@@ -33,8 +33,8 @@
 				result.innerHTML = (billFloat * tipAmount.value / 100).toFixed(2);
 			    } else if (tipAmount.value.length > 1) {
 				result.innerHTML = (billFloat * tipPercentage1).toFixed(2);
-			    } else if (tipAmount.value === "100") {
-				result.innerHTML = billFloat;
+			    } else if (tipAmount.value > 99) {
+				tipAmount = "99";
 			    }
 			} else {
 				result.innerHTML = "...";
