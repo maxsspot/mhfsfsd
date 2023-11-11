@@ -21,11 +21,15 @@
 	<script>
 		setInterval(function () {
 			var bill = document.getElementById ("bill");
-			var tippercentage = document.getElementById ("tipercentage");
+			
+			var tip = document.getElementById ("tipercentage");
+			var tipdecimal = "0." + tip;
+			var tipresult = parseFloat (tipdecimal);
+			
 			var result = document.getElementById ("result");
 
 			if (bill.value != null && tippercentage.value != null) {
-			  result.innerHTML = bill.value * tippercentage.value;
+			  result.innerHTML = bill.value * tipresult.value;
 			} else {
 				result.innerHTML = "...";
 			}
