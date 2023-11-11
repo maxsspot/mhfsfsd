@@ -17,7 +17,7 @@
 	<br>
 		<br>
 	<div id = "square">
-    <input placeholder = "Unrounded number here..." type = "number" id = "squareSide" />
+    <input placeholder = "One side of square..." type = "number" id = "squareSide" />
   </div>
 	<h1>=</h1>
 	<span id = "result">...</span>
@@ -33,7 +33,7 @@
 			if (unrounded.value != null) {
 				
 				if (mode.value == "Square") {
-					result.innerHTML = squareSide * 4;
+					result.innerHTML = squareSide + squareSide + squareSide + squareSide;
 				}
 				
 			} else {
