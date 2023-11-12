@@ -14,6 +14,7 @@
 		<option value = "Square" selected>Square</option>
 		<option value = "Rectangle">Rectangle</option>
 		<option value = "Triangle">Triangle</option>
+		<option value = "Parallelogram">Parallelogram</option>
 	</select>
 		<br>
 	<!-- -------- -->
@@ -37,6 +38,13 @@
 		<input placeholder = "Side #2 length" type = "number" id = "tri2" /><br><br>
 		<input placeholder = "Side #3 length" type = "number" id = "tri3" /><br>
   	</div>
+	<!-- -------- -->
+	<!-- -------- -->
+	<!-- -------- -->
+	<div id = "parallelogram">
+    		<input placeholder = "Base length" type = "number" id = "par1" /><br><br>
+		<input placeholder = "Side height" type = "number" id = "par2" /><br><br>
+  	</div>
 	<select id = "unit">
 		<option value = "Millimeters" selected>Millimeters</option>
 		<option value = "Centimeters">Centimeters</option>
@@ -55,42 +63,68 @@
 	<script>
 		setInterval(function () {
       			var squareSide = document.getElementById ("squareSide");
-			
+			///
 			var rectLen = document.getElementById ("rectLen");
 			var rectWidth = document.getElementById ("rectWidth");
-			
+			///
 			var tri1 = document.getElementById ("tri1");
 			var tri2 = document.getElementById ("tri2");
 			var tri3 = document.getElementById ("tri3");
+			///
+			var par1 = document.getElementById ("par1");
+			var par2 = document.getElementById ("par2");
 			//////////////
 			var result = document.getElementById ("result");
 			var mode = document.getElementById ("shape");
 			//////////////
 			var squareSideValue = squareSide.value;
+			///
 			var rectLenValue = rectLen.value;
 			var rectWidthValue = rectWidth.value;
+			///
 			var tri1Value = tri1.value;
 			var tri2Value = tri2.value;
 			var tri3Value = tri3.value;
+			///
+			var par1Value = par1.value;
+			var par2Value = par2.value;
 			//////////////
 			if (mode.value == "Square") {
 				document.getElementById ("rectangle").style.display = "none";
 				document.getElementById ("square").style.display = "block";
 				document.getElementById ("triangle").style.display = "none";
+				document.getElementById ("parallelogram").style.display = "none";
+				document.getElementById ("trapazoid").style.display = "none";
+				document.getElementById ("octagon").style.display = "none";
 				
 				result.innerHTML = parseFloat(squareSideValue) * 4;
 			} else if (mode.value == "Rectangle") {
 				document.getElementById ("rectangle").style.display = "block";
 				document.getElementById ("square").style.display = "none";
 				document.getElementById ("triangle").style.display = "none";
+				document.getElementById ("parallelogram").style.display = "none";
+				document.getElementById ("trapazoid").style.display = "none";
+				document.getElementById ("octagon").style.display = "none";
 				
 				result.innerHTML = (2 * parseFloat(rectLenValue)) + (2 * parseFloat(rectWidthValue));	
 			} else if (mode.value == "Triangle") {
 				document.getElementById ("rectangle").style.display = "none";
 				document.getElementById ("square").style.display = "none";
 				document.getElementById ("triangle").style.display = "block";
+				document.getElementById ("parallelogram").style.display = "none";
+				document.getElementById ("trapazoid").style.display = "none";
+				document.getElementById ("octagon").style.display = "none";
 				
 				result.innerHTML = parseFloat(tri1Value) + parseFloat(tri2Value) + parseFloat(tri3Value);
+			} else if (mode.value == "Parallelogram") {
+				document.getElementById ("rectangle").style.display = "none";
+				document.getElementById ("square").style.display = "none";
+				document.getElementById ("triangle").style.display = "none";
+				document.getElementById ("parallelogram").style.display = "block";
+				document.getElementById ("trapazoid").style.display = "none";
+				document.getElementById ("octagon").style.display = "none";
+				
+				result.innerHTML = (2 * parseFloat(par1Value)) + (2 * parseFloat(par2Value));	
 			} else {
 				result.innerHTML = "0";
 			}
