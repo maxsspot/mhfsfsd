@@ -17,6 +17,7 @@
 		<option value = "Parallelogram">Parallelogram</option>
 		<option value = "Trapezoid">Trapezoid</option>
 		<option value = "Octagon">Octagon</option>
+		<option value = "Diamond">Diamond</option>
 	</select>
 		<br>
 	<!-- -------- -->
@@ -62,6 +63,12 @@
 	<div id = "octagon">
   	    	<input placeholder = "Length of one side..." type = "number" id = "octSide" /><br>
   	</div>
+	<!-- -------- -->
+	<!-- -------- -->
+	<!-- -------- -->
+	<div id = "diamond">
+  	    	<input placeholder = "Length of one side..." type = "number" id = "diamondSide" /><br>
+  	</div>
 	<select id = "unit">
 		<option value = "Millimeters" selected>Millimeters</option>
 		<option value = "Centimeters">Centimeters</option>
@@ -99,6 +106,8 @@
 			var tr4 = document.getElementById ("tr4");
 			/// Octagon
       			var octSide = document.getElementById ("octSide");
+			/// Diamond
+      			var octSide = document.getElementById ("diamondSide");
 			
 			//////////////
 			
@@ -125,6 +134,8 @@
 			var tr4Value = parseFloat(tr4.value);
 			///
 			var octSideValue = octSide.value;
+			///
+			var diamondSideValue = diamondSide.value;
 			
 			//////////////
 			
@@ -158,6 +169,11 @@
 				document.getElementById ("octagon").style.display = "block";
 				
 				result.innerHTML = octSideValue * 8;
+			} else if (mode.value == "Diamond") {
+				hideAll();
+				document.getElementById ("diamond").style.display = "block";
+				
+				result.innerHTML = diamondSideValue * 4;
 			} else {
 				result.innerHTML = "0";
 			}
@@ -172,6 +188,7 @@
 				document.getElementById ("parallelogram").style.display = "none";
 				document.getElementById ("trapezoid").style.display = "none";
 				document.getElementById ("octagon").style.display = "none";
+				document.getElementById ("diamond").style.display = "none";
 		}
 	</script>
 		<style>
