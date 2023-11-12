@@ -17,6 +17,9 @@
 		<option value = "Parallelogram">Parallelogram</option>
 		<option value = "Trapezoid">Trapezoid</option>
 		<option value = "Octagon">Octagon</option>
+		<option value = "Heptagon">Heptagon</option>
+		<option value = "Hexagon">Hexagon</option>
+		<option value = "Pentagon">Pentagon</option>
 		<option value = "Diamond">Diamond</option>
 	</select>
 		<br>
@@ -66,6 +69,24 @@
 	<!-- -------- -->
 	<!-- -------- -->
 	<!-- -------- -->
+	<div id = "heptagon">
+  	    	<input placeholder = "Length of one side..." type = "number" id = "heptSide" /><br>
+  	</div>
+	<!-- -------- -->
+	<!-- -------- -->
+	<!-- -------- -->
+	<div id = "hexagon">
+  	    	<input placeholder = "Length of one side..." type = "number" id = "hexagonSide" /><br>
+  	</div>
+	<!-- -------- -->
+	<!-- -------- -->
+	<!-- -------- -->
+	<div id = "pentagon">
+  	    	<input placeholder = "Length of one side..." type = "number" id = "pentSide" /><br>
+  	</div>
+	<!-- -------- -->
+	<!-- -------- -->
+	<!-- -------- -->
 	<div id = "diamond">
   	    	<input placeholder = "Length of one side..." type = "number" id = "diamondSide" /><br>
   	</div>
@@ -106,8 +127,14 @@
 			var tr4 = document.getElementById ("tr4");
 			/// Octagon
       			var octSide = document.getElementById ("octSide");
+			/// Heptagon
+      			var heptSide = document.getElementById ("heptSide");
+			/// Hexagon
+      			var hexagonSide = document.getElementById ("hexagonSide");
+			/// Pentagon
+      			var pentSide = document.getElementById ("pentSide");
 			/// Diamond
-      			var octSide = document.getElementById ("diamondSide");
+      			var diamondSide = document.getElementById ("diamondSide");
 			
 			//////////////
 			
@@ -134,6 +161,12 @@
 			var tr4Value = parseFloat(tr4.value);
 			///
 			var octSideValue = octSide.value;
+			///
+			var heptSideValue = heptSide.value;
+			///
+			var hexagonSideValue = hexagonSide.value;
+			///
+			var pentSideValue = pentSide.value;
 			///
 			var diamondSideValue = diamondSide.value;
 			
@@ -169,6 +202,21 @@
 				document.getElementById ("octagon").style.display = "block";
 				
 				result.innerHTML = octSideValue * 8;
+			} else if (mode.value == "Heptagon") {
+				hideAll();
+				document.getElementById ("heptagon").style.display = "block";
+				
+				result.innerHTML = heptSideValue * 7;
+			} else if (mode.value == "Hexagon") {
+				hideAll();
+				document.getElementById ("hexagon").style.display = "block";
+				
+				result.innerHTML = hexagonSideValue * 6;
+			} else if (mode.value == "Pentagon") {
+				hideAll();
+				document.getElementById ("pentagon").style.display = "block";
+				
+				result.innerHTML = pentSideValue * 5;
 			} else if (mode.value == "Diamond") {
 				hideAll();
 				document.getElementById ("diamond").style.display = "block";
@@ -188,6 +236,9 @@
 				document.getElementById ("parallelogram").style.display = "none";
 				document.getElementById ("trapezoid").style.display = "none";
 				document.getElementById ("octagon").style.display = "none";
+				document.getElementById ("heptagon").style.display = "none";
+				document.getElementById ("hexagon").style.display = "none";
+				document.getElementById ("pentagon").style.display = "none";
 				document.getElementById ("diamond").style.display = "none";
 		}
 	</script>
