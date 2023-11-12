@@ -94,7 +94,7 @@
 				document.getElementById ("square").style.display = "block";
 				document.getElementById ("triangle").style.display = "none";
 				document.getElementById ("parallelogram").style.display = "none";
-				document.getElementById ("trapazoid").style.display = "none";
+				document.getElementById ("trapezoid").style.display = "none";
 				document.getElementById ("octagon").style.display = "none";
 				
 				result.innerHTML = parseFloat(squareSideValue) * 4;
@@ -103,7 +103,7 @@
 				document.getElementById ("square").style.display = "none";
 				document.getElementById ("triangle").style.display = "none";
 				document.getElementById ("parallelogram").style.display = "none";
-				document.getElementById ("trapazoid").style.display = "none";
+				document.getElementById ("trapezoid").style.display = "none";
 				document.getElementById ("octagon").style.display = "none";
 				
 				result.innerHTML = (2 * parseFloat(rectLenValue)) + (2 * parseFloat(rectWidthValue));	
@@ -112,17 +112,13 @@
 				document.getElementById ("square").style.display = "none";
 				document.getElementById ("triangle").style.display = "block";
 				document.getElementById ("parallelogram").style.display = "none";
-				document.getElementById ("trapazoid").style.display = "none";
+				document.getElementById ("trapezoid").style.display = "none";
 				document.getElementById ("octagon").style.display = "none";
 				
 				result.innerHTML = parseFloat(tri1Value) + parseFloat(tri2Value) + parseFloat(tri3Value);
 			} else if (mode.value == "Parallelogram") {
-				document.getElementById ("rectangle").style.display = "none";
-				document.getElementById ("square").style.display = "none";
-				document.getElementById ("triangle").style.display = "none";
+				hideAll();
 				document.getElementById ("parallelogram").style.display = "block";
-				document.getElementById ("trapazoid").style.display = "none";
-				document.getElementById ("octagon").style.display = "none";
 				
 				result.innerHTML = (2 * parseFloat(par1Value)) + (2 * parseFloat(par2Value));	
 			} else {
@@ -131,6 +127,15 @@
 
 			document.getElementById ("unitM").innerHTML = document.getElementById ("unit").value;
 		}, 1);
+
+		function hideAll () {
+				document.getElementById ("rectangle").style.display = "none";
+				document.getElementById ("square").style.display = "none";
+				document.getElementById ("triangle").style.display = "none";
+				document.getElementById ("parallelogram").style.display = "block";
+				document.getElementById ("trapezoid").style.display = "none";
+				document.getElementById ("octagon").style.display = "none";
+		}
 	</script>
 		<style>
 			* {
