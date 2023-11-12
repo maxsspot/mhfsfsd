@@ -15,6 +15,8 @@
 		<option value = "Rectangle">Rectangle</option>
 		<option value = "Triangle">Triangle</option>
 		<option value = "Parallelogram">Parallelogram</option>
+		<option value = "Trapezoid">Trapezoid</option>
+		<option value = "Octagon">Octagon</option>
 	</select>
 		<br>
 	<!-- -------- -->
@@ -90,30 +92,18 @@
 			var par2Value = par2.value;
 			//////////////
 			if (mode.value == "Square") {
-				document.getElementById ("rectangle").style.display = "none";
+				hideAll();
 				document.getElementById ("square").style.display = "block";
-				document.getElementById ("triangle").style.display = "none";
-				document.getElementById ("parallelogram").style.display = "none";
-				document.getElementById ("trapezoid").style.display = "none";
-				document.getElementById ("octagon").style.display = "none";
 				
 				result.innerHTML = parseFloat(squareSideValue) * 4;
 			} else if (mode.value == "Rectangle") {
+				hideAll();
 				document.getElementById ("rectangle").style.display = "block";
-				document.getElementById ("square").style.display = "none";
-				document.getElementById ("triangle").style.display = "none";
-				document.getElementById ("parallelogram").style.display = "none";
-				document.getElementById ("trapezoid").style.display = "none";
-				document.getElementById ("octagon").style.display = "none";
 				
 				result.innerHTML = (2 * parseFloat(rectLenValue)) + (2 * parseFloat(rectWidthValue));	
 			} else if (mode.value == "Triangle") {
-				document.getElementById ("rectangle").style.display = "none";
-				document.getElementById ("square").style.display = "none";
+				hideAll();
 				document.getElementById ("triangle").style.display = "block";
-				document.getElementById ("parallelogram").style.display = "none";
-				document.getElementById ("trapezoid").style.display = "none";
-				document.getElementById ("octagon").style.display = "none";
 				
 				result.innerHTML = parseFloat(tri1Value) + parseFloat(tri2Value) + parseFloat(tri3Value);
 			} else if (mode.value == "Parallelogram") {
