@@ -56,6 +56,12 @@
 		<input placeholder = "Side #3 length" type = "number" id = "tr3" /><br><br>
 		<input placeholder = "Side #4 length" type = "number" id = "tr4" /><br>
   	</div>
+	<!-- -------- -->
+	<!-- -------- -->
+	<!-- -------- -->
+	<div id = "octagon">
+  	    	<input placeholder = "Length of one side..." type = "number" id = "octSide" /><br>
+  	</div>
 	<select id = "unit">
 		<option value = "Millimeters" selected>Millimeters</option>
 		<option value = "Centimeters">Centimeters</option>
@@ -91,6 +97,8 @@
 			var tr2 = document.getElementById ("tr2");
 			var tr3 = document.getElementById ("tr3");
 			var tr4 = document.getElementById ("tr4");
+			/// Octagon
+      			var octSide = document.getElementById ("octSide");
 			
 			//////////////
 			
@@ -115,6 +123,8 @@
 			var tr2Value = parseFloat(tr2.value);
 			var tr3Value = parseFloat(tr3.value);
 			var tr4Value = parseFloat(tr4.value);
+			///
+			var octSideValue = octSide.value;
 			
 			//////////////
 			
@@ -143,6 +153,11 @@
 				document.getElementById ("trapezoid").style.display = "block";
 				
 				result.innerHTML = tr1Value + tr2Value + tr3Value + tr4Value;
+			} else if (mode.value == "Octagon") {
+				hideAll();
+				document.getElementById ("octagon").style.display = "block";
+				
+				result.innerHTML = octSideValue * 8;
 			} else {
 				result.innerHTML = "0";
 			}
@@ -156,7 +171,7 @@
 				document.getElementById ("triangle").style.display = "none";
 				document.getElementById ("parallelogram").style.display = "none";
 				document.getElementById ("trapezoid").style.display = "none";
-				//document.getElementById ("octagon").style.display = "none";
+				document.getElementById ("octagon").style.display = "none";
 		}
 	</script>
 		<style>
