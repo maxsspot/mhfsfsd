@@ -111,10 +111,10 @@
 			var par1Value = par1.value;
 			var par2Value = par2.value;
 			///
-			var tr1Value = tr1.value;
-			var tr2Value = tr2.value;
-			var tr3Value = tr3.value;
-			var tr4Value = tr4.value;
+			var tr1Value = parseFloat(tr1.value);
+			var tr2Value = parseFloat(tr2.value);
+			var tr3Value = parseFloat(tr3.value);
+			var tr4Value = parseFloat(tr4.value);
 			
 			//////////////
 			
@@ -142,7 +142,7 @@
 				hideAll();
 				document.getElementById ("trapezoid").style.display = "block";
 				
-				result.innerHTML = parseFloat(tr1Value) + parseFloat(tr2Value) + parseFloat(tr3Value) + parseFloat(tr4Value);
+				result.innerHTML = tr1Value + tr2Value + tr3Value + tr4Value;
 			} else {
 				result.innerHTML = "0";
 			}
