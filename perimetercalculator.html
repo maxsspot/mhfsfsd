@@ -12,13 +12,27 @@
 		<label for = "shape">FIND PERIMETER OF: ‎‎</label>
 	<select id = "shape">
 		<option value = "Square" selected>Square</option>
+		<option value = "Rectangle">Rectangle</option>
 	</select>
 	<br>
 		<br>
 		<br>
+	<!-- -------- ->
+	<!-- -------- ->
+	<!-- -------- ->
 	<div id = "square">
-    <input placeholder = "Length of one side..." type = "number" id = "squareSide" /><br>
-  </div>
+    		<input placeholder = "Length of one side..." type = "number" id = "squareSide" /><br>
+  	</div>
+	<!-- -------- ->
+	<!-- -------- ->
+	<!-- -------- ->
+	<div id = "rectangle">
+    		<input placeholder = "Length" type = "number" id = "rectLen" /><br><br>
+		<input placeholder = "Width" type = "number" id = "rectWidth" /><br>
+  	</div>
+	<!-- -------- ->
+	<!-- -------- ->
+	<!-- -------- ->
 	<select id = "unit">
 		<option value = "Millimeters" selected>Millimeters</option>
 		<option value = "Centimeters">Centimeters</option>
@@ -37,13 +51,26 @@
 	<script>
 		setInterval(function () {
       			var squareSide = document.getElementById ("squareSide");
+			var rectLen = document.getElementById ("rectLen");
+			var rectWidth = document.getElementById ("rectWidth");
+			//////////////
 			var result = document.getElementById ("result");
 			var mode = document.getElementById ("shape");
-
+			//////////////
 			var squareSideValue = squareSide.value;
-			
+			var rectLenValue = rectLen.value;
+			var rectWidthValue = rectWidth.value;
+			//////////////
 			if (mode.value == "Square") {
+				document.getElementById ("rectangle").style.display = "none";
+				document.getElementById ("square").style.display = "block";
+		
 				result.innerHTML = parseFloat(squareSideValue) * 4;
+			} else if (mode == "Rectangle") {
+				document.getElementById ("rectangle").style.display = "block";
+				document.getElementById ("square").style.display = "none";
+		
+				result.innerHTML = (2 * parseFloat(rectLenValue)) + (2 * parseFloat(rectWidthValue));	
 			} else {
 				result.innerHTML = "0";
 			}
@@ -87,6 +114,11 @@
 
 			div {
 				height:50px;
+			}
+
+			#rectangle, #triangle {
+				display:none;
+			}
 		</style>
     </body>
 </html>
