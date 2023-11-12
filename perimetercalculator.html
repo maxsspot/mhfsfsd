@@ -13,6 +13,7 @@
 	<select id = "shape">
 		<option value = "Square" selected>Square</option>
 		<option value = "Rectangle">Rectangle</option>
+		<option value = "Triangle">Triangle</option>
 	</select>
 		<br>
 	<!-- -------- -->
@@ -31,6 +32,11 @@
 	<!-- -------- -->
 	<!-- -------- -->
 	<!-- -------- -->
+	<div id = "triangle">
+    		<input placeholder = "Side #1 length" type = "number" id = "tri1" /><br><br>
+		<input placeholder = "Side #2 length" type = "number" id = "tri2" /><br><br>
+		<input placeholder = "Side #3 length" type = "number" id = "tri3" /><br>
+  	</div>
 	<select id = "unit">
 		<option value = "Millimeters" selected>Millimeters</option>
 		<option value = "Centimeters">Centimeters</option>
@@ -49,8 +55,13 @@
 	<script>
 		setInterval(function () {
       			var squareSide = document.getElementById ("squareSide");
+			
 			var rectLen = document.getElementById ("rectLen");
 			var rectWidth = document.getElementById ("rectWidth");
+			
+			var tri1 = document.getElementById ("tri1");
+			var tri2 = document.getElementById ("tri2");
+			var tri3 = document.getElementById ("tri3");
 			//////////////
 			var result = document.getElementById ("result");
 			var mode = document.getElementById ("shape");
@@ -58,17 +69,28 @@
 			var squareSideValue = squareSide.value;
 			var rectLenValue = rectLen.value;
 			var rectWidthValue = rectWidth.value;
+			var tri1Value = tri1.value;
+			var tri2Value = tri2.value;
+			var tri3Value = tri3.value;
 			//////////////
 			if (mode.value == "Square") {
 				document.getElementById ("rectangle").style.display = "none";
 				document.getElementById ("square").style.display = "block";
-		
+				document.getElementById ("triangle").style.display = "none";
+				
 				result.innerHTML = parseFloat(squareSideValue) * 4;
 			} else if (mode.value == "Rectangle") {
 				document.getElementById ("rectangle").style.display = "block";
 				document.getElementById ("square").style.display = "none";
-		
+				document.getElementById ("triangle").style.display = "none";
+				
 				result.innerHTML = (2 * parseFloat(rectLenValue)) + (2 * parseFloat(rectWidthValue));	
+			} else if (mode.value == "Triangle") {
+				document.getElementById ("rectangle").style.display = "none";
+				document.getElementById ("square").style.display = "none";
+				document.getElementById ("triangle").style.display = "block";
+				
+				result.innerHTML = parseFloat(tri1value) + parseFloat(tri2value) + parseFloat(tri3value);
 			} else {
 				result.innerHTML = "0";
 			}
