@@ -47,6 +47,15 @@
     		<input placeholder = "Base length" type = "number" id = "par1" /><br><br>
 		<input placeholder = "Side height" type = "number" id = "par2" /><br><br>
   	</div>
+	<!-- -------- -->
+	<!-- -------- -->
+	<!-- -------- -->
+	<div id = "trapezoid">
+  	    	<input placeholder = "Side #1 length" type = "number" id = "tr1" /><br><br>
+		<input placeholder = "Side #2 length" type = "number" id = "tr2" /><br><br>
+		<input placeholder = "Side #3 length" type = "number" id = "tr3" /><br><br>
+		<input placeholder = "Side #4 length" type = "number" id = "tr4" /><br>
+  	</div>
 	<select id = "unit">
 		<option value = "Millimeters" selected>Millimeters</option>
 		<option value = "Centimeters">Centimeters</option>
@@ -64,21 +73,32 @@
 	<a href = "/">RETURN HOME</a>
 	<script>
 		setInterval(function () {
+			
+			/// Square
       			var squareSide = document.getElementById ("squareSide");
-			///
+			/// Rectangle
 			var rectLen = document.getElementById ("rectLen");
 			var rectWidth = document.getElementById ("rectWidth");
-			///
+			/// Triangle
 			var tri1 = document.getElementById ("tri1");
 			var tri2 = document.getElementById ("tri2");
 			var tri3 = document.getElementById ("tri3");
-			///
+			/// Parallelogram
 			var par1 = document.getElementById ("par1");
 			var par2 = document.getElementById ("par2");
+			/// Trapezoid
+			var tr1 = document.getElementById ("tr1");
+			var tr2 = document.getElementById ("tr2");
+			var tr3 = document.getElementById ("tr3");
+			var tr4 = document.getElementById ("tr3");
+			
 			//////////////
+			
 			var result = document.getElementById ("result");
 			var mode = document.getElementById ("shape");
+			
 			//////////////
+			
 			var squareSideValue = squareSide.value;
 			///
 			var rectLenValue = rectLen.value;
@@ -90,7 +110,14 @@
 			///
 			var par1Value = par1.value;
 			var par2Value = par2.value;
+			///
+			var tr1Value = tr1.value;
+			var tr2Value = tr2.value;
+			var tr3Value = tr3.value;
+			var tr4Value = tr4.value;
+			
 			//////////////
+			
 			if (mode.value == "Square") {
 				hideAll();
 				document.getElementById ("square").style.display = "block";
@@ -111,6 +138,11 @@
 				document.getElementById ("parallelogram").style.display = "block";
 				
 				result.innerHTML = (2 * parseFloat(par1Value)) + (2 * parseFloat(par2Value));	
+			} else if (mode.value == "Trapezoid") {
+				hideAll();
+				document.getElementById ("trapezoid").style.display = "block";
+				
+				result.innerHTML = parseFloat(tr1Value)) + parseFloat(tr2Value)) + parseFloat(tr3Value)) + parseFloat(tr4Value));
 			} else {
 				result.innerHTML = "0";
 			}
