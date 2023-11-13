@@ -34,6 +34,7 @@
 
 			try {
         			var inequalitySolved = math.evaluate (inequality.value);
+				var inequalityRightSolved = math.evaluate (inequalityRight.value);
     			} catch (error) {
 				
     			}
@@ -43,6 +44,7 @@
 				if (mode.value == ">") {
 					if (inequalitySolved > inequalityRight.value) {
 						result.innerHTML = "Your inequality is correct. " + inequality.value + " is greater than " + inequalityRight.value + ".";
+						result.innerHTML += "<br><br>" + inequalitySolved + " = " + inequality + "<br>" + inequalityRightSolved + " = " + inequalityRight;
 					} else if (inequalitySolved < inequalityRight.value) {
 						result.innerHTML = "Your inequality is incorrect. "  + inequalityRight.value + " is greater than " + inequality.value + ".";
 					} else {
