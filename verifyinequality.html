@@ -11,13 +11,14 @@
 	<br>
 	<br>
 	<div id = "yeah">
-	<input placeholder = "Left Side(eg. 5+5)" type = "number" id = "inequality" />
+	<input placeholder = "Left Side" type = "number" id = "inequality" />
 	<select id = "mode">
     <option value = ">"> > </option>
     <option value = "<"> < </option>
     <option value = "≥"> ≥ </option>
     <option value = "≤"> ≤ </option>
   </select>
+	<input placeholder = "Left Side" type = "number" id = "inequalityRight" />
 	</div>
 	<h1>=</h1>
 	<span id = "result">...</span>
@@ -28,7 +29,8 @@
 		setInterval(function () {
 			var inequality = document.getElementById ("inequality");
 			var result = document.getElementById ("result");
-      var mode = document.getElementById ("mode");
+      			var mode = document.getElementById ("mode");
+			var inequalityRight = document.getElementById ("inequalityRight");
       
 			if (inequality.value != null) {
 				
@@ -58,13 +60,13 @@
 			}
 
 			input {
-				width:110px;
+				width:80px;
 				height:30px;
 				background-color:transparent;
 				border:lightgray solid 1px;
 				text-indent:5px;
 				text-align:left;
-				display:block;
+				margin:1px;
 			}
 			
 			hr {
@@ -73,14 +75,13 @@
 				border-radius:50px;
 			}
 
+			#yeah {
+				height:85px;
+			}
+
       select {
         width:30px;
-	      display:block;
       }
-			#yeah {
-				display: flex;
-  flex-direction: row;
-			}
 		</style>
     </body>
 </html>
