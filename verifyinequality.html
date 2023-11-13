@@ -31,9 +31,11 @@
 			var result = document.getElementById ("result");
       			var mode = document.getElementById ("mode");
 			var inequalityRight = document.getElementById ("inequalityRight");
-      			var inequalitySolved = math.evaluate (inequality);
 			
 			if (inequality.value != null) {
+			 	try {
+        				var inequalitySolved = math.evaluate (inequality);
+    				}
 				
 				if (mode == ">") {
 					if (inequalitySolved > inequalityRight) {
