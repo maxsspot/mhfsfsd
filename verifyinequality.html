@@ -35,7 +35,7 @@
 			try {
         			var inequalitySolved = math.evaluate (inequality);
     			} catch (error) {
-				        
+				var inequalitySolved = math.evaluate (inequality);
     			}
 			
 			if (inequality.value != null) {
@@ -49,6 +49,8 @@
 			} else {
 				result.innerHTML = "...";
 			}
+
+			console.log (inequalitySolved);
 		},1);
 	</script>
 		<style>
