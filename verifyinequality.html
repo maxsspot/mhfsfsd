@@ -18,7 +18,7 @@
     <option value = "≥"> ≥ </option>
     <option value = "≤"> ≤ </option>
   </select>
-	<input placeholder = "Answer" type = "number" id = "inequalityRight" />
+	<input placeholder = "Right Side" type = "number" id = "inequalityRight" />
 	</div>
 	<h1>=</h1>
 	<span id = "result">...</span>
@@ -33,7 +33,7 @@
 			var inequalityRight = document.getElementById ("inequalityRight");
 
 			try {
-        			var inequalitySolved = math.evaluate (inequality);
+        			var inequalitySolved = math.evaluate (inequality.value);
     			} catch (error) {
 				
     			}
@@ -41,7 +41,7 @@
 			if (inequality.value != null) {
 						
 				if (mode == ">") {
-					if (inequalitySolved > inequalityRight) {
+					if (inequalitySolved > inequalityRight.value) {
 						result.innerHTML = "Your inequality is correct.";
 					}
 				}
