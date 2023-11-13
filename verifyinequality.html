@@ -42,30 +42,30 @@
 			if (inequality.value && inequalityRight.value) {
 						
 				if (mode.value == ">") {
-					if (inequalitySolved > inequalityRight.value) {
+					if (inequalitySolved > inequalityRightSolved) {
 						result.innerHTML = "Your inequality is correct. " + inequality.value + " is greater than " + inequalityRight.value + ".";
-					} else if (inequalitySolved < inequalityRight.value) {
+					} else if (inequalitySolved < inequalityRightSolved) {
 						result.innerHTML = "Your inequality is incorrect. "  + inequalityRight.value + " is greater than " + inequality.value + ".";
 					} else {
 						result.innerHTML = "Your inequality is incorrect. "  + inequality.value + " is equal to " + inequalityRight.value + ".";
 						//result.innerHTML += "<br><br>" + inequality.value + " = " + inequalitySolved + "<br>" + inequalityRight.value + " = " + inequalityRightSolved;
 					}
 				} else if (mode.value == "<") {
-					if (inequalitySolved < inequalityRight.value) {
+					if (inequalitySolved < inequalityRightSolved) {
 						result.innerHTML = "Your inequality is correct. " + inequalityRight.value + " is greater than " + inequality.value + ".";
-					} else if (inequalitySolved > inequalityRight.value) {
+					} else if (inequalitySolved > inequalityRightSolved) {
 						result.innerHTML = "Your inequality is incorrect. "  + inequality.value + " is greater than " + inequalityRight.value + ".";
 					} else {
 						result.innerHTML = "Your inequality is incorrect. "  + inequalityRight.value + " is equal to " + inequality.value + ".";
 					}
 				} else if (mode.value == "≥") {
-					if (inequalitySolved >= inequalityRight.value) {
+					if (inequalitySolved >= inequalityRightSolved) {
 						result.innerHTML = "Your inequality is correct. " + inequality.value + " is greater than or equal to " + inequalityRight.value + ".";
 					} else if (inequalitySolved < inequalityRight.value) {
 						result.innerHTML = "Your inequality is incorrect. "  + inequalityRight.value + " is greater than " + inequality.value + ".";
 					}
 				}  else if (mode.value == "≤") {
-					if (inequalitySolved <= inequalityRight.value) {
+					if (inequalitySolved <= inequalityRightSolved) {
 						result.innerHTML = "Your inequality is correct. " + inequalityRight.value + " is greater than or equal to " + inequality.value + ".";
 					} else if (inequalitySolved < inequalityRight.value) {
 						result.innerHTML = "Your inequality is incorrect. "  + inequality.value + " is greater than " + inequalityRight.value + ".";
