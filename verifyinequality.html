@@ -44,13 +44,13 @@
 				if (mode.value == ">") {
 					if (inequalitySolved > inequalityRight.value) {
 						result.innerHTML = "Your inequality is correct. " + inequality.value + " is greater than " + inequalityRight.value + ".";
-						equations();
+						result.innerHTML += "<br><br>" + inequality.value + " = " + inequalitySolved + "<br>" + inequalityRight.value + " = " + inequalityRightSolved;
 					} else if (inequalitySolved < inequalityRight.value) {
 						result.innerHTML = "Your inequality is incorrect. "  + inequalityRight.value + " is greater than " + inequality.value + ".";
-						equations();
+						result.innerHTML += "<br><br>" + inequality.value + " = " + inequalitySolved + "<br>" + inequalityRight.value + " = " + inequalityRightSolved;
 					} else {
 						result.innerHTML = "Your inequality is incorrect. "  + inequality.value + " is equal to " + inequalityRight.value + ".";
-						equations();
+						result.innerHTML += "<br><br>" + inequality.value + " = " + inequalitySolved + "<br>" + inequalityRight.value + " = " + inequalityRightSolved;
 					}
 				} else if (mode.value == "<") {
 					if (inequalitySolved < inequalityRight.value) {
@@ -72,10 +72,6 @@
 				result.innerHTML = "...";
 			}
 		},1);
-
-		function equations () {
-			result.innerHTML += "<br><br>" + inequality.value + " = " + inequalitySolved + "<br>" + inequalityRight.value + " = " + inequalityRightSolved;
-		}
 	</script>
 		<style>
 			* {
