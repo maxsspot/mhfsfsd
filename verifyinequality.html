@@ -44,7 +44,7 @@
 				if (mode.value == ">") {
 					if (inequalitySolved > inequalityRight.value) {
 						result.innerHTML = "Your inequality is correct. " + inequality.value + " is greater than " + inequalityRight.value + ".";
-						result.innerHTML += "<br><br>" + inequalitySolved + " = " + inequality.value + "<br>" + inequalityRightSolved + " = " + inequalityRight.value;
+						result.innerHTML += "<br><br>" + inequality.value + " = " + inequalitySolved + "<br>" + inequalityRight.value + " = " + inequalityRightSolved;
 					} else if (inequalitySolved < inequalityRight.value) {
 						result.innerHTML = "Your inequality is incorrect. "  + inequalityRight.value + " is greater than " + inequality.value + ".";
 					} else {
