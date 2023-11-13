@@ -56,6 +56,12 @@
 					} else {
 						result.innerHTML = "Your inequality is incorrect. "  + inequalityRight.value + " is equal to " + inequality.value + ".";
 					}
+				} else if (mode.value == "≥") {
+					if (inequalitySolved > inequalityRight.value || inequalitySolved == inequalityRight.value) {
+						result.innerHTML = "Your inequality is correct. " + inequality.value + " is greater than or equal to " + inequalityRight.value + ".";
+					} else if (inequalitySolved < inequalityRight.value) {
+						result.innerHTML = "Your inequality is incorrect. "  + inequalityRight.value + " is greater than " + inequality.value + ".";
+					}
 				}
 				
 			} else {
