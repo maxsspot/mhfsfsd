@@ -12,7 +12,7 @@
 	<br>
 	
 	<input placeholder = "Left Side" id = "inequality" />
-	<select id = "mode">
+	<select id = "mode" onchange = "clear()">
     <option value = ">"> > </option>
     <option value = "<"> < </option>
     <option value = "≥"> ≥ </option>
@@ -76,6 +76,11 @@
 				result.innerHTML = "...";
 			}
 		},1);
+
+		function clear () {
+			inequality.value = "";
+			inequalityRight.value = "";
+		}
 	</script>
 		<style>
 			* {
