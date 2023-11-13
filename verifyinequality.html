@@ -42,7 +42,7 @@
 						
 				if (mode.value == ">") {
 					if (inequalitySolved > inequalityRight.value) {
-						result.innerHTML = "Your inequality is correct. \n" + inequality + " is greater than " + inequalityRight + ".";
+						result.innerHTML = "Your inequality is correct." + inequality.value + " is greater than " + inequalityRight.value + ".";
 					} else {
 						result.innerHTML = "Your inequality is incorrect.";
 					}
@@ -94,6 +94,11 @@
 			#yeah {
 				height:85px;
 				width:100%;
+			}
+
+			#result {
+				width:300px;
+				margin:auto;
 			}
 
       select {
