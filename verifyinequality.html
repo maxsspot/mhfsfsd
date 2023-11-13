@@ -44,11 +44,13 @@
 				if (mode.value == ">") {
 					if (inequalitySolved > inequalityRight.value) {
 						result.innerHTML = "Your inequality is correct. " + inequality.value + " is greater than " + inequalityRight.value + ".";
-						result.innerHTML += "<br><br>" + inequality.value + " = " + inequalitySolved + "<br>" + inequalityRight.value + " = " + inequalityRightSolved;
+						equations();
 					} else if (inequalitySolved < inequalityRight.value) {
 						result.innerHTML = "Your inequality is incorrect. "  + inequalityRight.value + " is greater than " + inequality.value + ".";
+						equations();
 					} else {
 						result.innerHTML = "Your inequality is incorrect. "  + inequality.value + " is equal to " + inequalityRight.value + ".";
+						equations();
 					}
 				} else if (mode.value == "<") {
 					if (inequalitySolved < inequalityRight.value) {
@@ -69,9 +71,11 @@
 			} else {
 				result.innerHTML = "...";
 			}
-
-			console.log (inequalitySolved);
 		},1);
+
+		function equations () {
+			result.innerHTML += "<br><br>" + inequality.value + " = " + inequalitySolved + "<br>" + inequalityRight.value + " = " + inequalityRightSolved;
+		}
 	</script>
 		<style>
 			* {
