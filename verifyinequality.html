@@ -37,8 +37,9 @@ var inequalityRight = document.getElementById("inequalityRight");
 var variablesLeft = inequality.value.match(/\b\d+[a-zA-Z]?\b/g) || [];
 var variablesRight = inequalityRight.value.match(/\b\d+[a-zA-Z]?\b/g) || [];
 
-inequalityNoVar = inequalityNoVar.replace(/[^0-9*\/+\-() ]/g, '');
-inequalityRightNoVar = inequalityRightNoVar.replace(/[^0-9*\/+\-() ]/g, '');
+var inequalityNoVar = inequality.value.replace(/\b\d+[a-zA-Z]\b/g, '');
+var inequalityRightNoVar = inequalityRight.value.replace(/\b\d+[a-zA-Z]\b/g, '');
+
 			
 document.getElementById("vars").innerHTML = "Left: " + variablesLeft + " | Right: " + variablesRight;
 
