@@ -11,14 +11,14 @@
 	<br>
 	<br>
 	
-	<input placeholder = "Left Side" id = "inequality" />
+	<input placeholder = "Left Side" id = "inequality" oninput = "validateInput()" inputmode = "numeric" />
 	<select id = "mode" onchange = "clear()">
     <option value = ">"> > </option>
     <option value = "<"> < </option>
     <option value = "≥"> ≥ </option>
     <option value = "≤"> ≤ </option>
   </select>
-	<input placeholder = "Right Side" id = "inequalityRight" />
+	<input placeholder = "Right Side" id = "inequalityRight" oninput = "validateInput()" inputmode = "numeric" />
 	
 	<h1>=</h1>
 	<span id = "result">...</span>
@@ -32,6 +32,9 @@
       			var mode = document.getElementById ("mode");
 			var inequalityRight = document.getElementById ("inequalityRight");
 
+			inequality.value = inequality.value.replace(/[^0-9*\/+\-()]/g, '');
+			inequalityRight.value = inequalityRight.value.replace(/[^0-9*\/+\-()]/g, '');
+			
 			try {
         			var inequalitySolved = math.evaluate (inequality.value);
 				var inequalityRightSolved = math.evaluate (inequalityRight.value);
