@@ -267,9 +267,13 @@ function equal () {
 const input = document.getElementById('equation');
 const container = document.getElementById('cal');
 
-setInterval(function () {
-  input.scrollTo(0,input.scrollWidth); 
-}, 1);
+function autoScroll () {
+      if (input.scrollWidth > input.clientWidth) {
+        	input.scrollLeft = input.scrollWidth - input.clientWidth;
+       }
+}
+
+document.getElementById('scrollingInput').addEventListener('input', autoScroll);
     </script>
     </body>
 </html>
