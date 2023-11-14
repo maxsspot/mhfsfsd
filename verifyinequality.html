@@ -70,13 +70,13 @@
 				}  else if (mode.value == "≤") {
 					if (inequalitySolved <= inequalityRightSolved) {
 						result.innerHTML = "Your inequality is correct. " + inequalityRight.value + " is greater than or equal to " + inequality.value + ".";
-					} else if (inequalitySolved < inequalityRightSolved) {
+					} else if (inequalitySolved > inequalityRightSolved) {
 						result.innerHTML = "Your inequality is incorrect. "  + inequality.value + " is greater than " + inequalityRight.value + ".";
 					}
 				}
 				
 			} else {
-				result.innerHTML = "Something went wrong...";
+				result.innerHTML = "..";
 			}
 		},1);
 
