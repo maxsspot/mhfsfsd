@@ -11,14 +11,14 @@
 	<br>
 	<br>
 	
-	<input placeholder = "Left Side" id = "inequality" oninput = "validateInput()" />
+	<input placeholder = "Left Side" id = "inequality" />
 	<select id = "mode" onchange = "clear()">
     <option value = ">"> > </option>
     <option value = "<"> < </option>
     <option value = "≥"> ≥ </option>
     <option value = "≤"> ≤ </option>
   </select>
-	<input placeholder = "Right Side" id = "inequalityRight" oninput = "validateInput()" />
+	<input placeholder = "Right Side" id = "inequalityRight" />
 	
 	<h1>=</h1>
 	<span id = "result">...</span>
@@ -33,8 +33,8 @@
 			var inequalityRight = document.getElementById ("inequalityRight");
 			
 			const regex = /\d+[a-zA-Z]/g;
-			const inequalityLeftNoVariables = inequality.replace(regex, '');
-			const inequalityRightNoVariables = inequalityRight.replace(regex, '');
+			const inequalityLeftNoVariables = inequality.value.replace(regex, '');
+			const inequalityRightNoVariables = inequalityRight.value.replace(regex, '');
 
 			//inequality.value = inequality.value.replace(/[^0-9*\/+\-()]/g, '');
 			//inequalityRight.value = inequalityRight.value.replace(/[^0-9*\/+\-()]/g, '');
