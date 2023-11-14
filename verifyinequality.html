@@ -46,6 +46,9 @@ var inequalityRightNoVar = variablesRight.map(function (match) {
     return match.replace(/[a-zA-Z]/g, '');
 }).join(' ');
 
+inequalityNoVar = inequalityNoVar.replace(/[^0-9*\/+\-() ]/g, '');
+inequalityRightNoVar = inequalityRightNoVar.replace(/[^0-9*\/+\-() ]/g, '');
+			
 document.getElementById("vars").innerHTML = "Left: " + variablesLeft + " | Right: " + variablesRight;
 
 //inequality.value = inequality.value.replace(/[^0-9*\/+\-()]/g, '');
