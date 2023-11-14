@@ -39,8 +39,8 @@
 			//inequalityRight.value = inequalityRight.value.replace(/[^0-9*\/+\-()]/g, '');
 			
 			try {
-        			var inequalitySolved = math.evaluate (inequalityNoVar.value);
-				var inequalityRightSolved = math.evaluate (inequalityRightNoVar.value);
+        			var inequalitySolved = math.evaluate (inequalityNoVar);
+				var inequalityRightSolved = math.evaluate (inequalityRightNoVar);
 
 				console.log (inequalitySolved + "," + inequalityRightSolved);
     			} catch (error) {
