@@ -34,8 +34,8 @@ var mode = document.getElementById("mode");
 var inequalityRight = document.getElementById("inequalityRight");
 
 // Extract numbers with letters
-var variablesLeft = inequality.value.match(/\b\d+|[a-zA-Z]\b/g) || [];
-var variablesRight = inequalityRight.value.match(/\b\d+|[a-zA-Z]\b/g) || [];
+var variablesLeft = inequality.value.match(/\b\d+(?:[a-zA-Z]\b)?/g) || [];
+var variablesRight = inequalityRight.value.match(/\b\d+(?:[a-zA-Z]\b)?/g) || [];
 
 var inequalityNoVar = inequality.value.replace(/\b(\d+[a-zA-Z]\b|\d+[a-zA-Z]\^)/g, '');
 var inequalityRightNoVar = inequalityRight.value.replace(/\b(\d+[a-zA-Z]\b|\d+[a-zA-Z]\^)/g, '');
