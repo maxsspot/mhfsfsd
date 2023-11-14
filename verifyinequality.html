@@ -39,13 +39,15 @@
 			//inequalityRight.value = inequalityRight.value.replace(/[^0-9*\/+\-()]/g, '');
 			
 			try {
-        			var inequalitySolved = math.evaluate (inequality.value);
-				var inequalityRightSolved = math.evaluate (inequalityRight.value);
+        			var inequalitySolved = math.evaluate (inequalityNoVar.value);
+				var inequalityRightSolved = math.evaluate (inequalityRightNoVar.value);
+
+				console.log (inequalitSolved.value + "," + inequalityRightSolved.value);
     			} catch (error) {
 				result.innerHTML = error;
-    			}
 
-			console.log (inequalitySolved.value + "," + inequalityRightSolved.value);
+				console.log (inequalitySolved.value + "," + inequalityRightSolved.value);
+    			}
 			
 			if (inequality.value && inequalityRight.value) {
 						
