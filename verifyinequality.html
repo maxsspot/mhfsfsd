@@ -32,8 +32,8 @@
       			var mode = document.getElementById ("mode");
 			var inequalityRight = document.getElementById ("inequalityRight");
 
-			var inequalityNoVar = inequality.replace(/\b\d+[a-zA-Z]\b/g, '');
-			var inequalityRightNoVar = inequalityRight.replace(/\b\d+[a-zA-Z]\b/g, '');
+			var inequalityNoVar = inequality.value.replace(/\b\d+[a-zA-Z]\b/g, '');
+			var inequalityRightNoVar = inequalityRight.value.replace(/\b\d+[a-zA-Z]\b/g, '');
 			
 			//inequality.value = inequality.value.replace(/[^0-9*\/+\-()]/g, '');
 			//inequalityRight.value = inequalityRight.value.replace(/[^0-9*\/+\-()]/g, '');
