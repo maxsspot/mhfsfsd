@@ -49,6 +49,8 @@ try {
     var inequalitySolved = math.evaluate(inequalityNoVar);
     var inequalityRightSolved = math.evaluate(inequalityRightNoVar);
 
+	const [inequalitySolved, inequalityRightSolved] = await Promise.all([inequalitySolvedPromise, inequalityRightSolvedPromise]);
+	
     document.getElementById("witvars").innerHTML = "Left: " + inequalityNoVar + " | Right: " + inequalityRightNoVar;
 
 			if (inequality.value && inequalityRight.value) {
