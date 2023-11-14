@@ -111,11 +111,7 @@ a:hover {
     </style>
 
     <script>
-	if (localStorage.getItem("yes")) {
-		document.getElementById ("calculation").innerHTML = localStorage.getItem ("yes");
-	} else {
-		document.getElementById ("calculation").innerHTML = "None";
-	}
+	document.getElementById ("calculation").innerHTML = localStorage.getItem ("yes");
 	    
       document.body.addEventListener("keydown", function (event) {
     if (event.key === "1") {
@@ -271,7 +267,7 @@ function equal () {
     }
 
     localStorage.setItem ("yes",result);
-    document.getElementById ("calculation").innerHTML = equation.value;
+    document.getElementById ("calculation").innerHTML = input;
 }
 	    
 ///////////////////////////////////
