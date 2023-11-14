@@ -41,11 +41,11 @@
 			try {
         			var inequalitySolved = math.evaluate (inequalityNoVar.value);
 				var inequalityRightSolved = math.evaluate (inequalityRightNoVar.value);
-
-				console.log (inequalitySolved + "," + inequalityRightSolved);
     			} catch (error) {
 				result.innerHTML = error;
     			}
+
+			console.log (inequalitySolved + "," + inequalityRightSolved);
 			
 			if (inequality.value && inequalityRight.value) {
 						
