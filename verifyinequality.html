@@ -31,17 +31,13 @@
 			var result = document.getElementById ("result");
       			var mode = document.getElementById ("mode");
 			var inequalityRight = document.getElementById ("inequalityRight");
-			
-			const regex = /\d+[a-zA-Z]/g;
-			const inequalityLeftNoVariables = inequality.value.replace(regex, '');
-			const inequalityRightNoVariables = inequalityRight.value.replace(regex, '');
 
 			//inequality.value = inequality.value.replace(/[^0-9*\/+\-()]/g, '');
 			//inequalityRight.value = inequalityRight.value.replace(/[^0-9*\/+\-()]/g, '');
 			
 			try {
-        			var inequalitySolved = math.evaluate (inequalityLeftNoVariables.value);
-				var inequalityRightSolved = math.evaluate (inequalityRightNoVariable.value);
+        			var inequalitySolved = math.evaluate (inequality.value);
+				var inequalityRightSolved = math.evaluate (inequalityRight.value);
     			} catch (error) {
 				result.innerHTML = error;
     			}
