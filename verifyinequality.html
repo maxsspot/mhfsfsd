@@ -38,11 +38,11 @@ var variablesLeft = inequality.value.match(/\b\d+[a-zA-Z]?\b/g);
 var variablesRight = inequalityRight.value.match(/\b\d+[a-zA-Z]?\b/g);
 
 // Extract numbers without letters
-var inequalityNoVar = variablesLeft.value.map(function (match) {
+var inequalityNoVar = variablesLeft.map(function (match) {
     return match.replace(/[a-zA-Z]/g, '');
 }).join(' ');
 
-var inequalityRightNoVar = variablesRight.value.map(function (match) {
+var inequalityRightNoVar = variablesRight.map(function (match) {
     return match.replace(/[a-zA-Z]/g, '');
 }).join(' ');
 
