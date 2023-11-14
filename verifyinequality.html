@@ -32,9 +32,13 @@
       			var mode = document.getElementById ("mode");
 			var inequalityRight = document.getElementById ("inequalityRight");
 
+			var variablesLeft = inequality.match(/\b\d+[a-zA-Z]\b/g);
+			var variablesRight = inequality.match(/\b\d+[a-zA-Z]\b/g);
 			var inequalityNoVar = inequality.value.replace(/\b\d+[a-zA-Z]\b/g, '');
 			var inequalityRightNoVar = inequalityRight.value.replace(/\b\d+[a-zA-Z]\b/g, '');
 
+			console.log (variablesLeft + variablesRight);
+			
 			//inequality.value = inequality.value.replace(/[^0-9*\/+\-()]/g, '');
 			//inequalityRight.value = inequalityRight.value.replace(/[^0-9*\/+\-()]/g, '');
 			
