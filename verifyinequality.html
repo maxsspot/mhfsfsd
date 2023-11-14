@@ -35,13 +35,14 @@
 			var inequalityNoVar = inequality.value.replace(/\b\d+[a-zA-Z]\b/g, '');
 			var inequalityRightNoVar = inequalityRight.value.replace(/\b\d+[a-zA-Z]\b/g, '');
 
-			console.log (inequalityNoVar + "," + inequalityRightNoVar);
 			//inequality.value = inequality.value.replace(/[^0-9*\/+\-()]/g, '');
 			//inequalityRight.value = inequalityRight.value.replace(/[^0-9*\/+\-()]/g, '');
 			
 			try {
         			var inequalitySolved = math.evaluate (inequalityNoVar.value);
 				var inequalityRightSolved = math.evaluate (inequalityRightNoVar.value);
+
+				console.log (inequalitySolved + "," + inequalityRightSolved);
     			} catch (error) {
 				result.innerHTML = error;
     			}
