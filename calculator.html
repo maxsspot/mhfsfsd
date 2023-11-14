@@ -266,12 +266,12 @@ function equal () {
     try {
         const result = math.evaluate(input);
         document.getElementById('equation').value = result;
+	document.getElementById ("calculation").innerHTML = result;
     } catch (error) {
         document.getElementById('equation').value = error;
     }
 
     localStorage.setItem ("yes",result);
-    document.getElementById ("calculation").innerHTML = localStorage.getItem ("yes");
 }
 	    
 ///////////////////////////////////
