@@ -28,30 +28,38 @@
 	<a href = "/">RETURN HOME</a>
 	<script>
 		setInterval(function () {
-			var inequality = document.getElementById ("inequality");
-			var result = document.getElementById ("result");
-      			var mode = document.getElementById ("mode");
-			var inequalityRight = document.getElementById ("inequalityRight");
+var inequality = document.getElementById("inequality");
+var result = document.getElementById("result");
+var mode = document.getElementById("mode");
+var inequalityRight = document.getElementById("inequalityRight");
 
-			var variablesLeft = inequality.value.match(/\b\d+[a-zA-Z]\b/g);
-			var variablesRight = inequalityRight.value.match(/\b\d+[a-zA-Z]\b/g);
-			var inequalityNoVar = inequality.value.replace(/\b(\d+[a-zA-Z]?)\b/g), '');
-			var inequalityRightNoVar = inequalityRight.value.replace(/\b(\d+[a-zA-Z]?)\b/g), '');
+// Extract numbers with letters
+var variablesLeft = inequality.value.match(/\b\d+[a-zA-Z]?\b/g);
+var variablesRight = inequalityRight.value.match(/\b\d+[a-zA-Z]?\b/g);
 
-			
-			document.getElementById ("vars").innerHTML = variablesLeft + variablesRight;
-			
-			//inequality.value = inequality.value.replace(/[^0-9*\/+\-()]/g, '');
-			//inequalityRight.value = inequalityRight.value.replace(/[^0-9*\/+\-()]/g, '');
-			
-			try {
-        			var inequalitySolved = math.evaluate (inequalityNoVar);
-				var inequalityRightSolved = math.evaluate (inequalityRightNoVar);
+// Extract numbers without letters
+var inequalityNoVar = variablesLeft.map(function (match) {
+    return match.replace(/[a-zA-Z]/g, '');
+}).join(' ');
 
-				document.getElementById ("witvars").innerHTML = "Left:" + inequalitySolved + " | Right:" + inequalityRightSolved;
-    			} catch (error) {
-				result.innerHTML = error;
-    			}
+var inequalityRightNoVar = variablesRight.map(function (match) {
+    return match.replace(/[a-zA-Z]/g, '');
+}).join(' ');
+
+document.getElementById("vars").innerHTML = "Left: " + variablesLeft + " | Right: " + variablesRight;
+
+//inequality.value = inequality.value.replace(/[^0-9*\/+\-()]/g, '');
+//inequalityRight.value = inequalityRight.value.replace(/[^0-9*\/+\-()]/g, '');
+
+try {
+    var inequalitySolved = math.evaluate(inequalityNoVar);
+    var inequalityRightSolved = math.evaluate(inequalityRightNoVar);
+
+    document.getElementById("witvars").innerHTML = "Left: " + inequalitySolved + " | Right: " + inequalityRightSolved;
+} catch (error) {
+    result.innerHTML = error;
+}
+
 			
 			if (inequality.value && inequalityRight.value) {
 						
