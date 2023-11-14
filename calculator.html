@@ -175,73 +175,73 @@ a:hover {
 });
 
 function one () {
-    document.getElementById ("equation").value += "1";
+    document.getElementById ("equation").value += "1"; s();
 }
 function two () {
-    document.getElementById ("equation").value += "2";
+    document.getElementById ("equation").value += "2"; s();
 }
 function three () {
-    document.getElementById ("equation").value += "3";
+    document.getElementById ("equation").value += "3"; s();
 }
 function plus () {
-    document.getElementById ("equation").value += "+";
+    document.getElementById ("equation").value += "+"; s();
 }
 function four () {
-    document.getElementById ("equation").value += "4";
+    document.getElementById ("equation").value += "4"; s();
 }
 function five () {
-    document.getElementById ("equation").value += "5";
+    document.getElementById ("equation").value += "5"; s();
 }
 function six () {
-    document.getElementById ("equation").value += "6";
+    document.getElementById ("equation").value += "6"; s();
 }
 function minus () {
-    document.getElementById ("equation").value += "-";
+    document.getElementById ("equation").value += "-"; s();
 }
 function seven () {
-    document.getElementById ("equation").value += "7";
+    document.getElementById ("equation").value += "7"; s();
 }
 function eight () {
-    document.getElementById ("equation").value += "8";
+    document.getElementById ("equation").value += "8"; s();
 }
 function nine () {
-    document.getElementById ("equation").value += "9";
+    document.getElementById ("equation").value += "9"; s();
 }
 function multiply () {
-    document.getElementById ("equation").value += "*";
+    document.getElementById ("equation").value += "*"; s();
 }
 function zero () {
-    document.getElementById ("equation").value += "0";
+    document.getElementById ("equation").value += "0"; s();
 }
 function decimal () {
-    document.getElementById ("equation").value += ".";
+    document.getElementById ("equation").value += "."; s();
 }
 function divide () {
-    document.getElementById ("equation").value += "/";
+    document.getElementById ("equation").value += "/"; s();
 }
 function exponent () {
-    document.getElementById ("equation").value += "^";
+    document.getElementById ("equation").value += "^"; s();
 }
 function parenthesisleft () {
-        document.getElementById ("equation").value += "(";
+        document.getElementById ("equation").value += "("; s();
 }
 function parenthesisright () {
-        document.getElementById ("equation").value += ")";
+        document.getElementById ("equation").value += ")"; s();
 }
 function squareroot () {
-	document.getElementById ("equation").value += "sqrt(";
+	document.getElementById ("equation").value += "sqrt("; s();
 	x = 1;
 }
 function sine () {
-	document.getElementById ("equation").value += "sin(";
+	document.getElementById ("equation").value += "sin("; s();
 	x = 1;
 }
 function cosine () {
-	document.getElementById ("equation").value += "cos(";
+	document.getElementById ("equation").value += "cos("; s();
 	x = 1;
 }
 function tangent () {
-	document.getElementById ("equation").value += "tan(";
+	document.getElementById ("equation").value += "tan("; s();
 	x = 1;
 }
 function clearValue () {
@@ -267,13 +267,11 @@ function equal () {
 const input = document.getElementById('equation');
 const container = document.getElementById('cal');
 
-function autoScroll () {
+function s () {
       if (input.scrollWidth > input.clientWidth) {
         	input.scrollLeft = input.scrollWidth - input.clientWidth;
        }
 }
-
-document.getElementById('equation').addEventListener('input', autoScroll);
     </script>
     </body>
 </html>
