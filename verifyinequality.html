@@ -40,7 +40,6 @@
 
 			
 			document.getElementById ("vars").innerHTML = variablesLeft + variablesRight;
-			document.getElementById ("witvars").innerHTML = inequalityNoVar + inequalityRightNoVar;
 			
 			//inequality.value = inequality.value.replace(/[^0-9*\/+\-()]/g, '');
 			//inequalityRight.value = inequalityRight.value.replace(/[^0-9*\/+\-()]/g, '');
@@ -48,6 +47,8 @@
 			try {
         			var inequalitySolved = math.evaluate (inequalityNoVar);
 				var inequalityRightSolved = math.evaluate (inequalityRightNoVar);
+
+				document.getElementById ("witvars").innerHTML = "Left:" + inequalityNoVar + "| Right:" + inequalityRightNoVar;
     			} catch (error) {
 				result.innerHTML = error;
     			}
