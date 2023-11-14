@@ -46,8 +46,8 @@ document.getElementById("vars").innerHTML = "Left: " + variablesLeft + " | Right
 //inequalityRight.value = inequalityRight.value.replace(/[^0-9*\/+\-()]/g, '');
 
 try {
-    var inequalitySolved = math.evaluate(inequalityNoVar);
-    var inequalityRightSolved = math.evaluate(inequalityRightNoVar);
+    var inequalitySolvedPromise = math.evaluate(inequalityNoVar);
+    var inequalityRightSolvedPromise = math.evaluate(inequalityRightNoVar);
 
 	const [inequalitySolved, inequalityRightSolved] = await Promise.all([inequalitySolvedPromise, inequalityRightSolvedPromise]);
 	
