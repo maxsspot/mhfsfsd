@@ -50,11 +50,7 @@ try {
     var inequalityRightSolved = math.evaluate(inequalityRightNoVar);
 
     document.getElementById("witvars").innerHTML = "Left: " + inequalityNoVar + " | Right: " + inequalityRightNoVar;
-} catch (error) {
-    result.innerHTML = error;
-}
 
-			
 			if (inequality.value && inequalityRight.value) {
 						
 				if (mode.value == ">") {
@@ -91,6 +87,12 @@ try {
 			} else {
 				result.innerHTML = "...";
 			}
+} catch (error) {
+    result.innerHTML = error;
+}
+
+			
+
 		},1);
 	</script>
 		<style>
