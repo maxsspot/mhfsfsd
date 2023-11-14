@@ -48,6 +48,10 @@
 	<br>
       </div>
       <br>
+      <p>Recent calculation: <span id = "calculation"></span></p>
+      <br>
+      <br>
+      <br>
       <a href = "/">RETURN HOME</a>
     <style>
       * {
@@ -107,6 +111,12 @@ a:hover {
     </style>
 
     <script>
+	if (localStorage.getItem("yes")) {
+		document.getElementById ("calculation").innerHTML = localStorage.getItem ("yes");
+	} else {
+		document.getElementById ("calculation").innerHTML = "None";
+	}
+	    
       document.body.addEventListener("keydown", function (event) {
     if (event.key === "1") {
         one();
@@ -259,6 +269,9 @@ function equal () {
     } catch (error) {
         document.getElementById('equation').value = error;
     }
+
+    localStorage.setItem ("yes",result);
+    document.getElementById ("calculation").innerHTML = localStorage.getItem ("yes");
 }
 	    
 ///////////////////////////////////
