@@ -37,15 +37,6 @@ var inequalityRight = document.getElementById("inequalityRight");
 var variablesLeft = inequality.value.match(/\b\d+[a-zA-Z]?\b/g) || [];
 var variablesRight = inequalityRight.value.match(/\b\d+[a-zA-Z]?\b/g) || [];
 
-// Extract numbers without letters
-var inequalityNoVar = variablesLeft.map(function (match) {
-    return match.replace(/[a-zA-Z]/g, '');
-}).join(' ');
-
-var inequalityRightNoVar = variablesRight.map(function (match) {
-    return match.replace(/[a-zA-Z]/g, '');
-}).join(' ');
-
 inequalityNoVar = inequalityNoVar.replace(/[^0-9*\/+\-() ]/g, '');
 inequalityRightNoVar = inequalityRightNoVar.replace(/[^0-9*\/+\-() ]/g, '');
 			
