@@ -41,12 +41,8 @@
 			try {
         			var inequalitySolved = math.evaluate (inequalityNoVar);
 				var inequalityRightSolved = math.evaluate (inequalityRightNoVar);
-
-				console.log (inequalitySolved + "," + inequalityRightSolved);
     			} catch (error) {
 				result.innerHTML = error;
-
-				console.log (inequalitySolved + "," + inequalityRightSolved);
     			}
 			
 			if (inequality.value && inequalityRight.value) {
@@ -86,6 +82,10 @@
 				result.innerHTML = "...";
 			}
 		},1);
+
+		setInterval (function () {
+							console.log (inequalitySolved + "," + inequalityRightSolved);
+		}, 1000);
 	</script>
 		<style>
 			* {
